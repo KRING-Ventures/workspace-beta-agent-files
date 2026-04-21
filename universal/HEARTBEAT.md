@@ -2,7 +2,7 @@
 
 Universal. Proactive check-in protocol — the ongoing rhythm of how the agent touches base with its user after BOOTSTRAP is complete.
 
-Source: adapted from the canonical Hal-era `00-stable/Heartbeat.md` in August's vault. Corey owns cadence changes — flag, don't silently edit.
+Canonical source: KRING's framework library (`00-stable/Heartbeat.md`). Cadence changes are platform-owned — flag, don't silently edit.
 
 ---
 

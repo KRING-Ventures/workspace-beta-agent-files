@@ -1,6 +1,6 @@
 # HUMAN OS
 
-Universal. August's 8-dimension coaching lens. Shipped with every agent so it can do the Human OS baseline during BOOTSTRAP §5 and reference the dimensions during ongoing coaching / mentoring.
+Universal. KRING's 8-dimension coaching lens. Shipped with every agent so it can do the Human OS baseline during BOOTSTRAP §5 and reference the dimensions during ongoing coaching / mentoring.
 
 ---
 
@@ -8,7 +8,7 @@ Universal. August's 8-dimension coaching lens. Shipped with every agent so it ca
 
 A lens, not a label system. A framework for noticing, naming, and strengthening patterns in how the user works. It sits underneath operational help — the agent uses it to surface what's actually limiting the user, not to grade them.
 
-Source of this framework: August Kring's work. Canonical version lives at `/root/obsidian-august/00-stable/Human_Os.md`.
+Canonical source: KRING's framework library (`00-stable/Human_Os.md`).
 
 ## The eight dimensions
 

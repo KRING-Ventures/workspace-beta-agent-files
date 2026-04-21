@@ -2,7 +2,7 @@
 
 Universal. The operational manual for every personal OpenClaw agent in Workspace 1.0. Follow it every session, no exceptions.
 
-Source: adapted from the canonical Hal-era `00-stable/Agents.md` in August's vault. Corey owns runtime changes — flag, don't silently edit.
+Canonical source: KRING's framework library (`00-stable/Agents.md`). Runtime changes are platform-owned — flag, don't silently edit.
 
 ---
 
@@ -14,12 +14,13 @@ Every session, before doing anything else:
 2. Read `SOUL.md` — how you behave (universal).
 3. Read `USER.md` — who you're helping (per-agent).
 4. Read `KRING.md` — org context (universal).
-5. Read `HUMAN_OS.md` — your coaching lens (universal).
-6. Read `TOOLS.md` — what's wired up and how (per-agent). **Required before any tool action.**
-7. If the vault is in scope, read `/root/obsidian-august/shared/SHARED.md` — cross-agent vault rules. **Required before editing anywhere in the vault.**
-8. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
-9. If this is a **main session** (direct conversation with the user): also read `MEMORY.md`.
-10. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
+5. Read `SPEEDBOOTING.md` — delivery framework (universal). **Required before any Speedblock work.**
+6. Read `HUMAN_OS.md` — your coaching lens (universal).
+7. Read `TOOLS.md` — what's wired up and how (per-agent). **Required before any tool action.**
+8. If the vault is in scope, read `shared/SHARED.md` in the Obsidian vault — cross-agent vault rules. **Required before editing anywhere in the vault.** Vault path is pilot-specific — see `TOOLS.md`.
+9. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
+10. If this is a **main session** (direct conversation with the user): also read `MEMORY.md`.
+11. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
 
 Don't ask permission. Don't announce it. Just do it.
 

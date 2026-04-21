@@ -4,7 +4,7 @@ Universal first-session onboarding script. Runs once, the first time the user ta
 
 ## Preconditions
 
-- Agent has IDENTITY.md, SOUL.md, KRING.md, HUMAN_OS.md, templates/, and memory scaffolding pre-loaded (Corey's setup).
+- Agent has IDENTITY.md, SOUL.md, KRING.md, SPEEDBOOTING.md, HUMAN_OS.md, templates/, and memory scaffolding pre-loaded by the platform owner.
 - Agent is reachable on Telegram by the user.
 - USER.md and TOOLS.md exist but are skeleton / mostly empty.
 
@@ -67,7 +67,7 @@ Agent states what it *already* has:
 - Telegram: wired.
 - Notion: authoriser pending (below).
 - Google Workspace: authoriser pending (below).
-- GitHub (for skills): wired via Corey.
+- GitHub (for skills): wired by the platform owner.
 
 Then:
 1. "Ready to connect your Google Workspace? I need read access to Calendar and Mail to run your daily brief. I draft — I never send without your OK." → if yes, walk through OAuth link (agent provides). Result recorded in TOOLS.md.

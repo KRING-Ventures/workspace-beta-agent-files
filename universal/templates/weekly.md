@@ -28,7 +28,7 @@ Runs Friday around the user's end-of-day (from USER.md §Patterns). Reflective, 
 • {thread/task} — {how overdue, why it's stuck}
 
 **Patterns I noticed**
-{2-3 bullets max. E.g., "Rescheduled the Jesper 1:1 twice this week — worth looking at." Or: "Four late-evening emails to external parties — maybe move those to mornings?"}
+{2-3 bullets max. E.g., "Rescheduled the same 1:1 twice this week — worth looking at." Or: "Four late-evening emails to external parties — maybe move those to mornings?"}
 
 **One thing to reflect on before Monday**
 {Single question, not a summary. Something the user can sit with over the weekend.}

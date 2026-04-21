@@ -9,11 +9,12 @@ Ship date: 2026-04-22. Pilots: August Kring, Jesper Kring, Johan Rishede Duus.
 ```
 universal/                    # Ships identically with every agent
 ├── SOUL.md                   # character, boundaries, voice
-├── AGENTS.md                 # session boot, memory arch, permission model (Corey to fill)
+├── AGENTS.md                 # session boot, memory arch, permission model
 ├── BOOTSTRAP.md              # first-session onboarding script
-├── HEARTBEAT.md              # check-in protocol (Corey to fill)
-├── HUMAN_OS.md               # 8-dimension coaching framework (August to fill)
-├── KRING.md                  # org context (August to fill)
+├── HEARTBEAT.md              # check-in protocol
+├── HUMAN_OS.md               # 8-dimension coaching framework
+├── KRING.md                  # org context (the entity only — no individuals)
+├── SPEEDBOOTING.md           # delivery framework (lifecycle, deliverables, rules)
 ├── MEMORY.md                 # long-term memory template
 ├── memory/
 │   └── 2026-04-22.md         # example daily log
