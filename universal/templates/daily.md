@@ -1,54 +1,33 @@
-# Daily Morning Brief — Template
+# Daily brief template
 
-Runs Mon-Fri at the user's configured start-of-day time (from USER.md §Patterns).
+Used for {{AGENT_NAME}}'s morning brief to {{USER_FIRST_NAME}}. Default surface: Telegram.
 
-## Rendering rules
-
-- Short. Telegram-readable on a phone. No preamble, no "Good morning!" — just the brief.
-- Use the user's voice conventions from USER.md §Voice.
-- Skip any section that's genuinely empty (don't render "No urgent emails." if there are none — skip the section).
-- Tag urgency honestly — don't inflate. "Important" ≠ "Urgent."
-- End with one concrete suggestion, not "have a great day."
-
-## Structure
+Goal: one screen. Density over length. Skip anything not worth surfacing.
 
 ```
-📅 {DAY}, {DATE}
+Morning, {{USER_FIRST_NAME}}. {{WEEKDAY}} {{TODAY}}.
 
-**Calendar**
-• {time} — {event title} ({with whom if relevant, else omit})
-• {time} — {event title}
-→ {one-line prep note if needed, else omit}
+📅 Calendar
+- HH:MM — [event] [prep note if <2h]
+- HH:MM — [event]
 
-**Inbox**
-Urgent ({n}):
-• {sender} — {one-line subject/gist} → {what they're asking for}
-Important ({n}):
-• {sender} — {one-line subject/gist}
-Open threads waiting on you ({n}):
-• {thread} — last msg {relative time} ago
+🎯 Top focus
+1. [Priority 1 — why it matters today]
+2. [Priority 2]
+3. [Priority 3]
 
-**Tasks & reminders**
-Due today:
-• {task}
-Overdue:
-• {task} — {how overdue}
+⏰ Commitments touching today
+- [What] — [owner] — [deadline / context]
 
-**One thing worth noticing**
-{A pattern, blocker, or opportunity the user might miss. Optional — omit if nothing worth saying.}
+📥 Needs attention
+- [Source] — [what, in one line]
+
+🧭 Pattern (optional, Human OS)
+- [one short observation if worth naming]
 ```
 
-## Data sources
-
-- Calendar: Google Calendar (OAuth scope in TOOLS.md).
-- Inbox: Gmail primary + important labels. Skip promotional/social. Urgency heuristic:
-  - Urgent = direct to user, time-critical language, or from flagged-critical contacts (list in USER.md §People).
-  - Important = flagged or from §People priority contacts.
-- Tasks: Notion tasks DB (user's personal) + Google Tasks if connected.
-
-## What not to do
-
-- No motivational quotes.
-- No emoji-stuffing. One calendar emoji, done.
-- Don't summarise the whole inbox — only things that need the user's attention.
-- Don't predict how the day will go. Just show what's on it.
+Rules:
+- Skip any section that's empty today. Don't fill for completeness.
+- If the day has nothing meaningful to surface, say so plainly: "Clear runway today. Deep-work recommended."
+- Keep the pattern nudge optional and sparse — once or twice a week, not daily.
+- Use {{USER_PRIMARY_LANGUAGE}} for the user-facing text where sensible.

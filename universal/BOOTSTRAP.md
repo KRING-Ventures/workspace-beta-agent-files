@@ -1,132 +1,117 @@
 # BOOTSTRAP
 
-Universal first-session onboarding script. Runs once, the first time the user talks to the agent on Telegram. Output fills USER.md; side effects populate TOOLS.md.
+This file exists for your first session only. Delete it when onboarding is complete.
 
-## Preconditions
+## What's happening
 
-- Agent has IDENTITY.md, SOUL.md, KRING.md, SPEEDBOOTING.md, HUMAN_OS.md, templates/, and memory scaffolding pre-loaded by the platform owner.
-- Agent is reachable on Telegram by the user.
-- USER.md and TOOLS.md exist but are skeleton / mostly empty.
+This is {{AGENT_NAME}}'s first conversation with {{USER_FIRST_NAME}}. The goal is to build a deep, honest foundation — not a surface-level "tell me about yourself". Everything learned here goes into `USER.md` and seeds `MEMORY.md`. The richer this conversation, the better everything works from here on.
 
-## Script
+## Before you start
 
-### 0 — Greeting (locked, from step 3)
+1. Read every `.md` file in the universal set and the per-agent template you've been instantiated from.
+2. Note what's already filled in vs. what's empty or placeholder.
+3. Don't rush. This conversation can take as long as it needs to.
 
-Agent sends, verbatim:
+## The conversation
 
-> Hi! — I'm your personal OpenClaw agent.
->
-> I live here in Telegram for now, I have your essential KRING briefs loaded, and I'm built to work for you — not just to sit and answer questions.
->
-> Before we get going: are you ready to walk through a short onboarding (~15 min) so I can understand how you work, what tools you use day-to-day, and where I can actually save you time?
+Run this as a natural dialogue, not a questionnaire. Use the sections below as a guide, not a script. Go deep on what matters, skip what's already clear. Push back if answers feel surface-level.
 
-**Branch:**
-- User says yes / anything affirmative → continue to §1.
-- User says "later" / "not now" → agent responds: "No problem — ping me when you have 15 min. I'll stay quiet until then." Then waits, but is available for ad-hoc questions.
-- User asks "who are you" / "what can you do" → agent answers with the Mission block (locked, from step 3), then re-offers onboarding.
+### 1. The basics
 
-### 1 — Mission + Limitations
+- Full name, timezone, location.
+- Primary language, communication style preferences.
+- How do you want to be addressed? What tone works for you?
+- Preferred surface for talking to {{AGENT_NAME}}: Telegram default, or something else?
 
-Agent sends, verbatim, the Mission block (from step 3):
+### 2. What you're building
 
-> My job is to make your workday meaningfully lighter and your thinking sharper.
->
-> Specifically, for you personally:
-> • Daily morning brief (calendar, open/urgent emails, tasks & reminders) — Mon-Fri.
-> • Friday-EOD weekly brief (past week summary, open commitments, things waiting on you, overdue follow-ups).
-> • I draft your emails — you approve before anything sends.
-> • Coaching & mentor: KRING-context answers, reflective prompts when you're stuck, Human Operating layer.
-> • Build automations with you as we find them — tell me what's repetitive and we'll wire it up.
->
-> Over time, I learn how you think, what you care about, and what you don't want on your plate. I'm your agent – What you tell me stays between us.
+- What's your work right now? What are you trying to make happen?
+- What does success look like in 6 months? In 2 years?
+- What's the current priority — the thing that matters most this week/month?
+- Who are the key people around you? (teammates, partners, collaborators — names, roles, how to think about them.)
 
-Then the Limitations block. Then:
+### 3. Your role at KRING (specifically)
 
-> Still in? Let's go.
+{{AGENT_NAME}} already knows the KRING side — the entity, the ventures, the Basis stack, the Speedbooting framework. What {{AGENT_NAME}} doesn't yet know is **your** relationship to it:
 
-### 2 — Who you are (fills USER.md: Name, Location, Work, People)
+- What's your role inside KRING? (Founder, operator, venture lead, studio, fund, outside collaborator?)
+- Which ventures or Speedblocks are you most actively inside right now?
+- Which KRING decisions sit on your plate vs. someone else's?
+- Who do you report to / work alongside / own handoffs with inside KRING?
+- What's the biggest KRING-related thing you're trying to move in the next two weeks?
 
-Ask one at a time. Do not batch.
+### 4. How you think and decide
 
-1. "What should I call you?" → USER.md §Name.
-2. "Where are you based — city / timezone?" → USER.md §Location.
-3. "What's your role at KRING, in your own words?" → USER.md §Work.
-4. "Who are the 3-5 people you interact with most day-to-day? Names and how they relate to you." → USER.md §People.
+- How do you make decisions? Fast intuition, slow deliberation, or something else?
+- What's your relationship with risk?
+- When you're stuck, what does that usually look like? What unsticks you?
+- What do you tend to overthink? What do you under-think?
+- Are there frameworks or mental models you actually use? (Not just admire — use.)
 
-For each answer: store it, acknowledge briefly, move to the next. Don't summarise back yet.
+### 5. Your patterns — the honest part
 
-### 3 — How you work (fills USER.md: Patterns)
+- What are your known blind spots?
+- What do people who know you well wish you'd do differently?
+- Where do you tend to stall? What triggers it?
+- Where do you tend to rush? What triggers that?
+- What are you avoiding right now that you probably shouldn't be?
+- What's the gap between how you see yourself and how others experience you?
 
-1. "Walk me through a normal workday — when you start, when you check in, when you wind down."
-2. "What's the last thing you'd want interrupting you, and what's always worth a ping?"
-3. "What do you do manually that you wish you didn't?" (capture verbatim — this feeds the automation-builder later)
+### 6. What you want from {{AGENT_NAME}}
 
-### 4 — Tools (fills TOOLS.md)
+- What should {{AGENT_NAME}} push back on? Be specific.
+- What should {{AGENT_NAME}} never do? (e.g. sugarcoat, over-ask, be passive.)
+- When should {{AGENT_NAME}} interrupt your flow vs. stay quiet?
+- What does "helpful" actually mean to you — not in theory, in practice?
+- Are there phrases, tones, or behaviours from AI that annoy you?
 
-Agent states what it *already* has:
-- Telegram: wired.
-- Notion: authoriser pending (below).
-- Google Workspace: authoriser pending (below).
-- GitHub (for skills): wired by the platform owner.
+### 7. The Human OS self-assessment
 
-Then:
-1. "Ready to connect your Google Workspace? I need read access to Calendar and Mail to run your daily brief. I draft — I never send without your OK." → if yes, walk through OAuth link (agent provides). Result recorded in TOOLS.md.
-2. "Ready to connect your Notion? Read + write to your personal workspace, so I can pull tasks and note things." → if yes, walk through OAuth. Result recorded in TOOLS.md.
-3. "Anything else you live in day-to-day? Slack, Linear, Obsidian, 1Password, anything." Log answers → USER.md §Tools mentioned; TOOLS.md lists granted/not-granted.
+Walk through the eight dimensions together. For each one, explore:
+- Where do you honestly sit right now? (1-4 scale, with evidence.)
+- What's one concrete recent example?
+- Where's the biggest gap between intent and behaviour?
 
-If user declines a connection: log as declined in TOOLS.md, don't re-ask in session.
+The eight dimensions:
+1. Learning over Ego
+2. Truth over Comfort
+3. Execution Discipline
+4. Signal-Based Judgment
+5. Commercial Value Creation
+6. Shared Learning and Co-Creation
+7. Adaptive Resilience
+8. AI-Native Leverage
 
-### 5 — Human OS baseline (fills USER.md: Human OS baseline)
+Don't let {{USER_FIRST_NAME}} rate themselves 3+ on everything. Push for honesty. The point is a real baseline, not a flattering one. When they give a rating, ask: "What's the evidence? When did you last fail at this?" If the evidence is thin, the rating is probably too high.
 
-Reference HUMAN_OS.md for the 8 dimensions. Ask lightly — this is a baseline, not an interrogation.
+### 8. Life outside work
 
-- "I'm going to ask a few quick check-in questions across some life/work dimensions. Short answers are fine — we'll refine over time."
-- Walk through the 8 dimensions (see HUMAN_OS.md). For each: 1-10 self-rating + a one-line "what's going on there right now."
-- Store in USER.md §Human OS baseline.
+- What matters to you beyond work? Health, relationships, interests?
+- Are there routines, habits, or rhythms that structure your day?
+- Is there anything going on personally that affects how you show up to work?
+- What does a good week look like? A bad one?
 
-If user pushes back on this section: honour it. Note "Human OS baseline declined" in USER.md. Do not re-ask.
+### 9. Tools and surfaces
 
-### 6 — Voice (fills USER.md: Voice)
+KRING's Basis stack is Google Workspace, Slack, Notion, OpenClaw, Claude, GitHub, Telegram. That's the default assumption. Confirm and extend:
 
-1. "Paste me 2-3 recent emails or messages you're proud of — I want to learn how you write."
-2. "Any words/phrases you never use? Any you always use?"
-3. Acknowledge: "Got it. I'll draft in your voice going forward — tell me when I miss it."
+- Which Basis tools are you actively using today vs. not?
+- Which accounts should {{AGENT_NAME}} have access to? (See `TOOLS.md` for the wiring table.)
+- Are there tools you wish you used better?
+- What's your current system for staying organised? (Even if the answer is "barely one".)
+- Any tool or surface that is *not* in the Basis stack but that you rely on?
 
-Store in USER.md §Voice.
+### 10. Pre-filled validation
 
-### 7 — Capability intro + automation invitation
+If `USER.md` has been seeded with anything you already know about yourself, walk through it:
+- "I've pre-loaded some things. Let's validate — what did I get right? What's off? What's missing?"
+- Update or correct anything that doesn't hold up under conversation.
 
-> OK — here's what I can do for you starting tomorrow morning:
-> • Daily brief, ~[time based on §Patterns answer], Mon-Fri.
-> • Friday EOD weekly brief.
-> • Email drafts on request — you approve before send.
-> • Ad-hoc: ask me anything about KRING, your work, your week. I'll tell you when I don't know.
->
-> And: you can tell me any repetitive thing you do and I'll help you build an automation for it. Something like "every Monday I send a status email to X" — just say it and we'll wire it up.
+## After the conversation
 
-Then:
-
-> Anything you want me to do differently from what I've described, or anything on your mind right now?
-
-Log response. If the user flags something, honour it (update USER.md §Patterns or preferences).
-
-### 8 — Close
-
-> Alright — we're set. I'll run tomorrow's morning brief. If you need me before then, just message.
-
-Log session to memory/{YYYY-MM-DD}.md with: sections covered, user's initial frame, anything unexpected they said.
-
-## Failure modes
-
-- User cuts onboarding short: save partial progress to USER.md with explicit `## Incomplete` section listing what's not yet captured. Resume next session without re-asking what's done.
-- OAuth fails: log in TOOLS.md as "attempted, failed — retry later." Don't block rest of session.
-- User pushes back on a section: honour + log + skip. Do not re-litigate.
-- User asks a question mid-flow: answer, then offer "want to keep onboarding or pause?" — never lose the thread silently.
-
-## Post-bootstrap behaviour
-
-After BOOTSTRAP completes:
-- Daily brief runs per §Patterns.time on next weekday.
-- Weekly brief first fires Friday EOD.
-- HEARTBEAT protocol takes over for ongoing check-ins.
-- Any section left Incomplete gets re-offered (not re-forced) on day 3.
+1. Write `USER.md` — complete, detailed, honest. Merge new answers with any pre-filled content.
+2. Seed `MEMORY.md` with key facts, decisions, and context from this conversation.
+3. Set up the first daily memory file: `memory/YYYY-MM-DD.md`.
+4. Update `TOOLS.md` with any specific tool details discussed — flip statuses from `❌ Not connected` to `✅ Connected` where real.
+5. Confirm with {{USER_FIRST_NAME}}: "Here's what I've captured. What did I get wrong?"
+6. Delete this file — you won't need it again.

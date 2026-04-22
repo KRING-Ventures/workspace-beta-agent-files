@@ -1,68 +1,53 @@
-# Email Draft — Template & Pattern
+# Email draft template
 
-How the agent drafts emails on the user's behalf. Voice is pulled from USER.md §Voice at render time. Structure is universal.
+Used when {{AGENT_NAME}} drafts an email for {{USER_FIRST_NAME}} to review before sending. {{AGENT_NAME}} never sends without explicit approval.
 
-## Draft rules
-
-- **Draft only.** Never send. Return the draft to the user for approval and edit.
-- **Match the user's voice** (see USER.md §Voice). If voice not yet captured (USER.md §Voice empty), flag "voice not yet calibrated — please review carefully" at the top of the draft.
-- **Shortest reasonable length.** Err on the side of brevity. The reader's time matters.
-- **No AI-tells.** No "I hope this email finds you well." No "I wanted to reach out regarding..." No "kindly." Plain openers: recipient's name, then the thing.
-- **No em dashes unless the user uses them** (check USER.md §Voice).
-
-## Output format to user
-
-When returning a draft in Telegram, use this shape:
+## Draft structure
 
 ```
-📧 Draft → {recipient name}
-Subject: {subject line}
+To: [recipient(s)]
+Cc: [if any]
+Subject: [concrete — not "following up"]
 
-{body}
+[Greeting — match {{USER_FIRST_NAME}}'s usual tone with this person]
+
+[One-line context if needed — what this is about]
+
+[The actual ask / update / response — direct, specific]
+
+[Next step or call to action — who does what by when]
+
+[Sign-off matching {{USER_FIRST_NAME}}'s style]
+```
+
+## Drafting rules
+
+- **Match tone to relationship.** Check prior thread or recent correspondence. Don't default to formal.
+- **Lead with the point.** No "I hope this email finds you well" unless {{USER_FIRST_NAME}} actually writes like that.
+- **One ask per email.** If two things are needed, say so explicitly and number them.
+- **Concrete subject lines.** "Carelog pricing — decision needed by Friday" beats "Following up".
+- **Language.** Default to {{USER_PRIMARY_LANGUAGE}} unless the recipient writes in something else.
+- **Attachments.** Name them in the body if relevant; never attach on {{USER_FIRST_NAME}}'s behalf without confirmation.
+
+## Presenting the draft
+
+Send the draft to {{USER_FIRST_NAME}} for review, wrapped like this:
+
+```
+Drafted reply to [recipient] — [one-line purpose]:
 
 ---
-Reply "send" to send as-is, "edit: {your change}" to change, or just paste a new version.
+[full draft above]
+---
+
+Ready to send, or anything to change?
 ```
 
-## Body structure (default)
+If multiple edits come back, re-present the clean version before sending — don't send a draft mid-revision.
 
-For most emails:
+## Never
 
-1. **Context line** (one sentence, if needed — what this is about)
-2. **The ask / point** (what you want the reader to do, or what you're telling them)
-3. **Details** (only what they need to act on the ask)
-4. **Close** (one line — next step or "let me know" — no "best regards" unless the user uses them)
-
-## Reply to inbound — common patterns
-
-### Reply declining
-- Acknowledge the ask.
-- Decline clearly — no hedging, no "I wish I could."
-- Offer alternative if there is one.
-- Close.
-
-### Reply agreeing / committing
-- Confirm the ask as you understood it.
-- State your commitment (what, by when).
-- One line on what you need from them, if anything.
-
-### Reply needing more info
-- One sentence: here's what I need to proceed.
-- Frame the question specifically — don't dump all possible questions.
-
-### Reply saying "not now / not me"
-- Brief explanation (one sentence).
-- Redirect if possible (to a person or a later time).
-
-## Outbound — asking for something
-
-- State the ask in the first sentence.
-- Give context in the second.
-- Make it easy to say yes (specific enough that the recipient doesn't have to ask follow-ups).
-- Deadline if relevant.
-
-## Never draft without flagging
-
-- If the email is to someone **not in USER.md §People** and the user hasn't emailed them before — flag: "First email to this recipient — review tone carefully."
-- If the email **breaks a commitment** (saying no to something the user previously said yes to) — flag it.
-- If the email touches **legal, HR, financial** matters — flag and suggest the user write this one themselves or review extra carefully.
+- Send without explicit approval.
+- Add recipients {{USER_FIRST_NAME}} didn't name.
+- Fabricate context, deadlines, or commitments.
+- Use "we" if {{USER_FIRST_NAME}} hasn't established it with this recipient.

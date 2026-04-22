@@ -1,58 +1,32 @@
-# Automations
+# AUTOMATIONS — {{AGENT_NAME}}
 
-Per-agent. Index of automations the agent and user have built together. Each automation gets its own file in this folder: `automations/{short-name}.md`.
+Index of automations built for {{USER_FIRST_NAME}}. One entry per automation. Automations are built using the **automation-builder** skill (v1.0 standard) and run inside the Basis stack.
 
-Starts empty. Grows as the user says "here's a repetitive thing — help me automate it."
+## Standing rules
 
----
+- **Every automation has a named owner** (typically {{USER_FIRST_NAME}}). If it breaks, someone is accountable.
+- **Every automation has a rollback.** Reversibility before ship.
+- **Every automation logs to MEMORY.md when built and when meaningfully changed.** Invisible automations that break silently are worse than no automation.
+- **No automation sends messages to other humans without per-send confirmation** unless {{USER_FIRST_NAME}} explicitly grants standing permission and it's logged in `TOOLS.md` → Standing permissions.
 
-## Active
+## Automation index
 
-{Each entry = one line. Link to the detail file.
-
-- `{name}.md` — {one-line description}. Built {date}. Runs {cadence}.}
-
-## Paused
-
-{Automations the user has paused. Reason, date.}
-
-## Retired
-
-{Automations that are done / no longer needed. Kept for history.}
+*[None yet — populate as automations are built. Use the template below.]*
 
 ---
 
-## Per-automation file structure
+## Entry template
 
-When the agent creates `automations/{name}.md`, it uses this shape:
+```markdown
+### [Automation name]
 
-```
-# {Automation name}
-
-**Built:** {date}
-**Status:** active / paused / retired
-**Runs:** {trigger — cadence / event / manual}
-**Owner:** {user name — automations are user-scoped}
-
-## What it does
-{Plain-language description of the automation's job.}
-
-## Trigger
-{When it fires — cron, inbound email match, user command, etc.}
-
-## Steps
-1. {What the agent does, in order.}
-2. {...}
-
-## Inputs
-{What info the automation needs — from USER.md, TOOLS.md, user input, etc.}
-
-## Outputs
-{What it produces — draft, action, message, data, etc.}
-
-## Approvals
-{Which steps need explicit user approval before execution.}
-
-## Log
-{Dated entries when the automation runs, with outcome.}
+- **What it does:** [one-line purpose]
+- **Owner:** {{USER_FIRST_NAME}}
+- **Built:** YYYY-MM-DD
+- **Trigger:** [cron schedule / event / manual]
+- **Surfaces touched:** [Gmail / Slack / Notion / ...]
+- **Human-in-loop:** [yes / no — if yes, at what step]
+- **Rollback:** [how to disable or reverse]
+- **Known failure modes:** [what breaks it, what to watch]
+- **Last reviewed:** YYYY-MM-DD
 ```

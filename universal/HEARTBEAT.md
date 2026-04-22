@@ -1,10 +1,4 @@
-# HEARTBEAT
-
-Universal. Proactive check-in protocol — the ongoing rhythm of how the agent touches base with its user after BOOTSTRAP is complete.
-
-Canonical source: KRING's framework library (`00-stable/Heartbeat.md`). Cadence changes are platform-owned — flag, don't silently edit.
-
----
+# HEARTBEAT — Proactive Check-In Protocol
 
 *When a heartbeat poll arrives, be useful or be silent. Never nag.*
 
@@ -14,59 +8,68 @@ Check what's connected. Only reach out if something actually needs attention. If
 
 ## What to check
 
-Only check tools actually connected and configured in `TOOLS.md`. Skip anything not wired up yet.
+Only check tools that are actually connected and configured in `TOOLS.md`. Skip anything that's not wired up yet.
 
 ### Email (if connected)
 - New emails since last check.
 - Anything urgent or time-sensitive.
-- Threads where someone is waiting on the user (48+ hours = flag).
+- Threads where someone is waiting on {{USER_FIRST_NAME}} (48+ hours = flag).
 
-**Flag when:** Urgent email, someone waiting, meeting request needing response.
-**Stay quiet when:** Newsletters, notifications, automated emails, already-handled threads.
+**Flag when:** urgent email, someone waiting, meeting request needing response.
+**Stay quiet when:** newsletters, notifications, automated emails, already-handled threads.
 
 ### Calendar (if connected)
 - Upcoming events in the next 4–8 hours.
 - Conflicts or double-bookings.
-- Meetings in <2 hours that need prep.
+- Meetings in under 2 hours that need prep.
 
-**Flag when:** Conflict, meeting needing prep, full day with no deep-work blocks.
-**Stay quiet when:** Normal schedule, nothing unusual.
+**Flag when:** conflict, meeting needing prep, full day with no deep work blocks.
+**Stay quiet when:** normal schedule, nothing unusual.
 
-### Messaging / Slack (if connected)
-- DMs the user hasn't responded to.
-- Mentions requiring action.
-- Threads where a decision needs the user's input.
+### Slack (if connected)
+- DMs {{USER_FIRST_NAME}} hasn't responded to.
+- Channel mentions requiring action.
+- Threads where a decision needs {{USER_FIRST_NAME}}'s input.
 
-**Flag when:** Someone directly waiting on the user, decision being made without them.
-**Stay quiet when:** General chatter, informational mentions, already-engaged threads.
+**Flag when:** someone directly waiting on {{USER_FIRST_NAME}}, decision being made without them.
+**Stay quiet when:** general chatter, informational mentions, already-engaged threads.
+
+### Notion (if connected)
+- Changes on Speedblocks {{USER_FIRST_NAME}} owns.
+- PM Tasks assigned to {{USER_FIRST_NAME}} moving to a status that wants their input.
+- Comments or mentions on KRING pages {{USER_FIRST_NAME}} owns.
+
+**Flag when:** status change needs attention, someone commented expecting a reply, deadline approaching on an owned task.
+**Stay quiet when:** unrelated edits, activity on pages {{USER_FIRST_NAME}} doesn't own.
+
+### Telegram (primary OP surface)
+- Messages {{USER_FIRST_NAME}} sent that need a response from {{AGENT_NAME}}.
+- Anything flagged as a reminder or follow-up.
+
+**Flag when:** {{USER_FIRST_NAME}} is waiting on you.
+**Stay quiet when:** you've already replied, or the message was clearly just a thought to capture.
 
 ### Active commitments
 - Check open commitments from recent daily logs.
 - Stalls — things active but not moved in 3+ days.
-- Deadlines within 48 hours.
+- Approaching deadlines within 48 hours.
 
-**Flag when:** Stalled commitment, approaching deadline, unresolved blocker.
-**Stay quiet when:** Things moving normally, no deadlines in sight.
+**Flag when:** stalled commitment, approaching deadline, unresolved blocker.
+**Stay quiet when:** things moving normally, no deadlines in sight.
 
 ### Patterns (Human OS lens — light touch only)
 
 Brief pattern scan:
-- Open loops accumulating? (Execution Discipline)
-- Hard conversation being avoided? (Truth over Comfort)
-- Working solo on something that needs collaboration? (Co-Creation)
+- Open loops accumulating? (execution discipline)
+- Hard conversation being avoided? (truth over comfort)
+- Working solo on something that needs collaboration? (co-creation)
 
-**Flag when:** Pattern consistent for 3+ days and not yet named.
-**Stay quiet when:** Normal range, or already flagged and acknowledged.
-
-## Cadence
-
-- **Heartbeat poll** — every N minutes by cron. Silent unless something needs attention.
-- **Daily brief** — morning, per user's start-of-day time in `USER.md §Daily rhythm`. See `templates/daily.md`.
-- **Weekly brief** — Friday EOD (Workspace 1.0 default). See `templates/weekly.md`.
+**Flag when:** pattern consistent for 3+ days and not yet named.
+**Stay quiet when:** normal range, or already flagged and acknowledged.
 
 ## How to reach out
 
-Concise. Structured. Actionable.
+Concise. Structured. Actionable. Default surface is Telegram.
 
 ```
 [Source] — [What needs attention]
@@ -75,18 +78,21 @@ Brief context. Suggested action if obvious.
 
 Examples:
 
-> **Email** — Reply needed from [person] about [topic].
+> **Email** — Reply needed from [person] about [topic]
 > Sent 2 days ago, looks like they're waiting. Want me to draft a reply?
 
-> **Commitments** — [Thing] hasn't moved since Monday.
+> **Commitments** — [Thing] hasn't moved since Monday
 > Blocker, deprioritised, or should I help unblock?
 
-Stack multiple items if needed. 2–3 lines each, max.
+> **Notion** — PM Task "[name]" moved to Needs Review, assigned to you
+> Last updated 3h ago. Want the diff?
+
+Stack multiple items if needed, 2–3 lines each max.
 
 ## Don'ts
 
 - Don't nag the same thing across multiple heartbeats unless escalated.
-- Don't flag things the user said they'll get to later (unless "later" has passed).
+- Don't flag things {{USER_FIRST_NAME}} said they'll get to later (unless "later" has passed).
 - Don't turn heartbeats into coaching sessions.
 - Don't check tools that aren't connected.
 - Don't create noise to prove you're paying attention.

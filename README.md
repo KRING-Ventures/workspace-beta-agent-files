@@ -1,48 +1,75 @@
 # Workspace 1.0 — OpenClaw Agent File Set
 
-The files each pilot's personal OpenClaw agent ships with. Authored 2026-04-21 against the locked file structure in the Workspace 1.0 Deliverables task.
+Canonical files each pilot's personal OpenClaw agent ("OP") ships with. Authored 2026-04-22.
 
-Ship date: 2026-04-22. Pilots: August Kring, Jesper Kring, Johan Rishede Duus.
+**Ship date:** 2026-04-22 (Workspace Speedblock v1.0)
+**Pilots:** August Kring, Jesper Kring, Johan Rishede Duus
+**Basis stack:** Google Workspace (incl. Gemini) · Slack · Notion · OpenClaw · Claude · GitHub · Telegram (OP surface)
 
-## Structure
+## What this repo is
+
+The **shared** file set for every OP. Universal files ship identically across all three pilots. Per-agent files are personalised from the template in `per-agent-template/` during BOOTSTRAP.
+
+This is not the agent runtime. The runtime is OpenClaw; this is the file layer OpenClaw reads.
+
+## Layout
 
 ```
-universal/                    # Ships identically with every agent
-├── SOUL.md                   # character, boundaries, voice
-├── AGENTS.md                 # session boot, memory arch, permission model
-├── BOOTSTRAP.md              # first-session onboarding script
-├── HEARTBEAT.md              # check-in protocol
-├── HUMAN_OS.md               # 8-dimension coaching framework
-├── KRING.md                  # org context (the entity only — no individuals)
-├── SPEEDBOOTING.md           # delivery framework (lifecycle, deliverables, rules)
-├── MEMORY.md                 # long-term memory template
+universal/                       # ships identically with every OP
+├── SOUL.md                      # character, boundaries, voice
+├── AGENTS.md                    # session boot, memory, permissions
+├── BOOTSTRAP.md                 # first-session onboarding dialogue
+├── HEARTBEAT.md                 # proactive check-in protocol
+├── HUMAN_OS.md                  # 8-dimension coaching lens
+├── KRING.md                     # KRING org context (the entity)
+├── SPEEDBOOTING.md              # KRING delivery framework (Playbook + Use-cases + Roadmap)
+├── MEMORY.md                    # long-term memory template
 ├── memory/
-│   └── 2026-04-22.md         # example daily log
+│   └── 2026-04-22.md            # example daily log
 └── templates/
-    ├── daily.md              # daily morning brief template
-    ├── weekly.md             # Friday-EOD weekly brief template
-    └── email-draft.md        # email drafting structure
+    ├── daily.md                 # morning brief
+    ├── weekly.md                # Friday EOD brief
+    └── email-draft.md           # email drafting structure
 
-per-agent-template/           # Blueprint copied into each pilot's folder
-├── IDENTITY.md               # name, role, who they work for, vibe, emoji
-├── USER.md                   # user profile, filled during BOOTSTRAP
-├── TOOLS.md                  # what's wired up for this user
+per-agent-template/              # blueprint copied into each pilot's folder
+├── IDENTITY.md                  # name, role, vibe, emoji
+├── USER.md                      # user profile (filled during BOOTSTRAP)
+├── TOOLS.md                     # what's actually wired up
 └── automations/
-    └── AUTOMATIONS.md        # index of built automations
+    └── AUTOMATIONS.md           # index of built automations
 
-pilots/
-├── august/                   # August Kring's agent
-├── jesper/                   # Jesper Kring's agent
-└── johan/                    # Johan Rishede Duus's agent
+pilots/                          # per-pilot personalisation (stubs)
+├── august/                      # August Kring's OP
+├── jesper/                      # Jesper Kring's OP
+└── johan/                       # Johan Rishede Duus's OP
 ```
 
-## Authoring state (2026-04-21)
+## Two agent layers at KRING
 
-- **Cosmo-authored from canonical sources** (ready for review): SOUL.md, BOOTSTRAP.md, templates/*, MEMORY.md + memory example, per-agent-template scaffolds, KRING.md, HUMAN_OS.md, AGENTS.md, HEARTBEAT.md.
-  - KRING.md sourced from `/root/obsidian-august/10-active/projects/KRING/**`, `_guests/cosmo/{Identity,User,Kring}.md`, and the (now-deleted) `speedblock-master-brief` skill in git history.
-  - HUMAN_OS.md / AGENTS.md / HEARTBEAT.md adapted from canonical `00-stable/{Human_Os,Agents,Heartbeat}.md` in August's vault.
-- **Per-pilot personalisation** (stubbed, to fill before deploy): IDENTITY.md, USER.md, TOOLS.md for each of August/Jesper/Johan.
+- **Cosmo** — the shared KRING-org agent. One instance for the organisation. Runs in `/root/clawd/`. Not this repo.
+- **OP** — each user's personal agent. Three instances in v1.0 (one per pilot). Built on this file set.
+
+Gemini (in-product summaries inside Google Workspace) and Claude (general-purpose work) are the other two AI layers — they're tools OP and Cosmo use, not separate agents.
 
 ## Skills
 
-Not in this repo. Live in the GitHub skills repo. Each agent grabs what it needs on demand; granted-skill scopes are recorded in that user's TOOLS.md.
+Not in this repo. Skills live in the shared `openclaw-skills` GitHub repo. Each OP grants skills on demand; granted skills are recorded in that pilot's `TOOLS.md`. v1.0 ships the automation-builder skill as standard.
+
+## Instantiation flow
+
+1. Copy `universal/` and `per-agent-template/` into the new OP's workspace.
+2. Run BOOTSTRAP.md as a dialogue with the user — fill `USER.md`, confirm `IDENTITY.md`, wire `TOOLS.md`.
+3. Seed `MEMORY.md` and today's `memory/YYYY-MM-DD.md` with what came out of BOOTSTRAP.
+4. Delete `BOOTSTRAP.md` from the live workspace. It's first-session only.
+
+Placeholders (`{{AGENT_NAME}}`, `{{USER_FIRST_NAME}}`, etc.) use double curly braces. `{{FROM_BOOTSTRAP}}` markers are filled in-session, not during instantiation.
+
+## Authoring state (2026-04-22)
+
+- **Universal files** — authored against today's locked decisions. KRING.md sourced from kring.com/about + the Hybrid Venture Studio principles + in-flight project context. SPEEDBOOTING.md reflects the **Playbook + Use-cases + Roadmap** model locked 2026-04-22.
+- **Per-agent template** — blueprint ready for personalisation.
+- **Pilots** — stubs only. Each pilot's IDENTITY/USER/TOOLS is filled in BOOTSTRAP.
+
+## Licence
+
+MIT. See `LICENSE` in the repo root if/when added.

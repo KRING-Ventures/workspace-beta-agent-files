@@ -1,62 +1,102 @@
-# User Profile — August Kring
+# USER — August Kring
 
-Per-agent. Pilot: August Kring. Seeded by BOOTSTRAP's first session. Grows over time as the agent learns the user. Agent updates this file directly whenever stable facts about the user change — and always notes the date of the update.
+*{{AGENT_NAME}}'s understanding of who August is. Filled in during BOOTSTRAP and maintained over time.*
 
----
+## Basics
 
-## Name
+- **Full name:** August Kring
+- **Location:** Copenhagen, Denmark
+- **Timezone:** CET / CEST
+- **Primary language:** Danish (works in English)
+- **Communication style:** Direct, honest, value-driven, no filler. Danish-direct.
+- **Primary surface for talking to {{AGENT_NAME}}:** Telegram (default) · {{FROM_BOOTSTRAP}}
 
-August Kring. {Nickname / what they want to be called — to confirm during BOOTSTRAP.}
+## Role at KRING
 
-## Location
+- **Role:** {{FROM_BOOTSTRAP}}
+- **Ventures / Speedblocks currently inside:** {{FROM_BOOTSTRAP}}
+- **Decisions on his plate:** {{FROM_BOOTSTRAP}}
+- **Who he reports to / works alongside inside KRING:** {{FROM_BOOTSTRAP}}
+- **Biggest KRING-related thing he's moving in the next two weeks:** {{FROM_BOOTSTRAP}}
 
-{City + country. Time zone.}
+## What he's building (broader)
 
-## Work
+- **Current work:** {{FROM_BOOTSTRAP}}
+- **6-month goal:** {{FROM_BOOTSTRAP}}
+- **2-year vision:** {{FROM_BOOTSTRAP}}
+- **Current priority:** {{FROM_BOOTSTRAP}}
 
-{Role in user's own words. Current focus. Key responsibilities.}
+## Key people
 
-## People
+*Captured during BOOTSTRAP. Expected to be incomplete on first pass — add as they come up.*
 
-{The 3-5 people the user interacts with most day-to-day. For each:
-- Name
-- Relation (colleague / manager / client / family / etc.)
-- How the user usually interacts with them (channel, frequency)
-- Anything notable the agent should know}
+### KRING
 
-## Patterns
+- **[Name]** — [role, relationship, key context]
 
-### Daily rhythm
-{When they start, peaks, when they wind down. Start-of-day time for daily brief.}
+### Close network
 
-### Interruption tolerance
-{What's always worth a ping. What never is.}
+- **[Name]** — [role, relationship, key context]
 
-### Current manual pain
-{Things they do manually and wish they didn't — feeds the automation-builder over time.}
+### Personal
 
-## Voice
+- **[Name]** — [relationship, key context]
 
-{How they write. 2-3 sample snippets. Words/phrases they use. Words/phrases they don't. Tone — formal/casual/dry/warm.}
+## How he thinks and decides
+
+- **Decision style:** {{FROM_BOOTSTRAP}}
+- **Relationship with risk:** {{FROM_BOOTSTRAP}}
+- **When stuck:** {{FROM_BOOTSTRAP}}
+- **Tends to overthink:** {{FROM_BOOTSTRAP}}
+- **Tends to under-think:** {{FROM_BOOTSTRAP}}
+- **Frameworks he actually uses:** {{FROM_BOOTSTRAP}}
+
+## Known patterns
+
+- **Stalling triggers:** {{FROM_BOOTSTRAP}}
+- **Rushing triggers:** {{FROM_BOOTSTRAP}}
+- **Blind spots:** {{FROM_BOOTSTRAP}}
+- **Gap between self-image and others' experience:** {{FROM_BOOTSTRAP}}
+- **Currently avoiding:** {{FROM_BOOTSTRAP}}
 
 ## Human OS baseline
 
-{8-dimension baseline (per HUMAN_OS.md) — rating + one-line context per dimension, captured during BOOTSTRAP §5. Dated. Re-check quarterly or on user request.
+*Self-assessed during BOOTSTRAP. {{AGENT_NAME}} validates and updates over time based on observed behaviour.*
 
-If user opted out: "Human OS declined — don't re-ask."}
+| Dimension | Self-rating (1-4) | {{AGENT_NAME}}'s observed | Last updated | Notes |
+|---|---|---|---|---|
+| Learning over Ego | | (insufficient observation) | 2026-04-22 | |
+| Truth over Comfort | | (insufficient observation) | 2026-04-22 | |
+| Execution Discipline | | (insufficient observation) | 2026-04-22 | |
+| Signal-Based Judgment | | (insufficient observation) | 2026-04-22 | |
+| Commercial Value Creation | | (insufficient observation) | 2026-04-22 | |
+| Shared Learning / Co-Creation | | (insufficient observation) | 2026-04-22 | |
+| Adaptive Resilience | | (insufficient observation) | 2026-04-22 | |
+| AI-Native Leverage | | (insufficient observation) | 2026-04-22 | |
 
-## Preferences (settled)
+## What he wants from {{AGENT_NAME}}
 
-{Things the user has explicitly said "always" or "never" about. Add dated notes as they come up.}
+- **Push back on:** {{FROM_BOOTSTRAP}}
+- **Never do:** {{FROM_BOOTSTRAP}}
+- **Interrupt flow when:** {{FROM_BOOTSTRAP}}
+- **Definition of "helpful":** {{FROM_BOOTSTRAP}}
+- **AI behaviours that annoy him:** {{FROM_BOOTSTRAP}}
 
-## Tools mentioned
+## Life outside work
 
-{All tools the user has told the agent they use day-to-day — even if not yet connected. Separate list from TOOLS.md, which tracks *granted access*. This is "what exists in their stack."}
+- **Health/fitness:** {{FROM_BOOTSTRAP}}
+- **Relationships:** {{FROM_BOOTSTRAP}}
+- **Routines:** {{FROM_BOOTSTRAP}}
+- **Good week looks like:** {{FROM_BOOTSTRAP}}
+- **Bad week looks like:** {{FROM_BOOTSTRAP}}
+
+## Tools and systems
+
+- **Daily tools (Basis + anything else):** {{FROM_BOOTSTRAP}}
+- **Organisation system:** {{FROM_BOOTSTRAP}}
+- **Tools he wishes he used better:** {{FROM_BOOTSTRAP}}
 
 ---
 
-## Update log
-
-{Dated entries each time this file is materially updated. Short — one line per change.
-
-- 2026-04-22 — Seeded by BOOTSTRAP session.}
+*Last updated: 2026-04-22*
+*Last validated with August: pending first BOOTSTRAP session.*

@@ -1,62 +1,121 @@
-# User Profile
+# USER — {{USER_FIRST_NAME}}
 
-Per-agent. Starts skeletal. Seeded by BOOTSTRAP's first session. Grows over time as the agent learns the user. Agent updates this file directly whenever stable facts about the user change — and always notes the date of the update.
+*{{AGENT_NAME}}'s understanding of who {{USER_FIRST_NAME}} is. Filled in during BOOTSTRAP and maintained over time.*
 
----
+## Basics
 
-## Name
+- **Full name:** {{USER_FULL_NAME}}
+- **Location:** {{USER_LOCATION}}
+- **Timezone:** {{USER_TIMEZONE}}
+- **Primary language:** {{USER_PRIMARY_LANGUAGE}} (works in {{USER_WORKING_LANGUAGE}})
+- **Communication style:** {{USER_COMMUNICATION_STYLE}}
+- **Primary surface for talking to {{AGENT_NAME}}:** Telegram (default) · {{FROM_BOOTSTRAP}}
 
-{Full name. Nickname / what they want to be called.}
+## Role at KRING
 
-## Location
+- **Role:** {{FROM_BOOTSTRAP}}
+- **Ventures / Speedblocks currently inside:** {{FROM_BOOTSTRAP}}
+- **Decisions on their plate:** {{FROM_BOOTSTRAP}}
+- **Who they report to / work alongside inside KRING:** {{FROM_BOOTSTRAP}}
+- **Biggest KRING-related thing they're moving in the next two weeks:** {{FROM_BOOTSTRAP}}
 
-{City + country. Time zone.}
+## What they're building (broader)
 
-## Work
+- **Current work:** {{FROM_BOOTSTRAP}}
+- **6-month goal:** {{FROM_BOOTSTRAP}}
+- **2-year vision:** {{FROM_BOOTSTRAP}}
+- **Current priority:** {{FROM_BOOTSTRAP}}
 
-{Role in user's own words. Current focus. Key responsibilities.}
+## Key people
 
-## People
+*Captured during BOOTSTRAP. Expected to be incomplete on first pass — add as they come up.*
 
-{The 3-5 people the user interacts with most day-to-day. For each:
-- Name
-- Relation (colleague / manager / client / family / etc.)
-- How the user usually interacts with them (channel, frequency)
-- Anything notable the agent should know}
+### KRING
 
-## Patterns
+- **[Name]** — [role, relationship, key context]
 
-### Daily rhythm
-{When they start, peaks, when they wind down. Start-of-day time for daily brief.}
+### Close network
 
-### Interruption tolerance
-{What's always worth a ping. What never is.}
+- **[Name]** — [role, relationship, key context]
 
-### Current manual pain
-{Things they do manually and wish they didn't — feeds the automation-builder over time.}
+### Personal
 
-## Voice
+- **[Name]** — [relationship, key context]
 
-{How they write. 2-3 sample snippets. Words/phrases they use. Words/phrases they don't. Tone — formal/casual/dry/warm.}
+*Note: if any person holds dual context (e.g. family + business), name it here. Dual-context relationships change how hard conversations land.*
+
+## How they think and decide
+
+- **Decision style:** {{FROM_BOOTSTRAP}}
+- **Relationship with risk:** {{FROM_BOOTSTRAP}}
+- **When stuck:** {{FROM_BOOTSTRAP}}
+- **Tends to overthink:** {{FROM_BOOTSTRAP}}
+- **Tends to under-think:** {{FROM_BOOTSTRAP}}
+- **Frameworks they actually use:** {{FROM_BOOTSTRAP}}
+
+## Known patterns
+
+- **Stalling triggers:** {{FROM_BOOTSTRAP}}
+- **Rushing triggers:** {{FROM_BOOTSTRAP}}
+- **Blind spots:** {{FROM_BOOTSTRAP}} — what people close to them wish they'd do differently
+- **Gap between self-image and others' experience:** {{FROM_BOOTSTRAP}}
+- **Currently avoiding:** {{FROM_BOOTSTRAP}}
+
+## Self-understanding frameworks
+
+*Optional. Only fill in if the user actively uses these.*
+
+- **Enneagram:** [type if known]
+- **Human Design:** [type if known]
+- **MBTI / Big Five / other:** [if known]
+- **How to use these:** context for understanding patterns, not labels.
 
 ## Human OS baseline
 
-{8-dimension baseline (per HUMAN_OS.md) — rating + one-line context per dimension, captured during BOOTSTRAP §5. Dated. Re-check quarterly or on user request.
+*Self-assessed during BOOTSTRAP. {{AGENT_NAME}} validates and updates over time based on observed behaviour.*
 
-If user opted out: "Human OS declined — don't re-ask."}
+| Dimension | Self-rating (1-4) | {{AGENT_NAME}}'s observed | Last updated | Notes |
+|---|---|---|---|---|
+| Learning over Ego | | (insufficient observation) | {{TODAY}} | |
+| Truth over Comfort | | (insufficient observation) | {{TODAY}} | |
+| Execution Discipline | | (insufficient observation) | {{TODAY}} | |
+| Signal-Based Judgment | | (insufficient observation) | {{TODAY}} | |
+| Commercial Value Creation | | (insufficient observation) | {{TODAY}} | |
+| Shared Learning / Co-Creation | | (insufficient observation) | {{TODAY}} | |
+| Adaptive Resilience | | (insufficient observation) | {{TODAY}} | |
+| AI-Native Leverage | | (insufficient observation) | {{TODAY}} | |
 
-## Preferences (settled)
+*Divergence between self-rating and observed rating is itself a useful signal to discuss.*
 
-{Things the user has explicitly said "always" or "never" about. Add dated notes as they come up.}
+## What they want from {{AGENT_NAME}}
 
-## Tools mentioned
+- **Push back on:** {{FROM_BOOTSTRAP}}
+- **Never do:** {{FROM_BOOTSTRAP}}
+- **Interrupt flow when:** {{FROM_BOOTSTRAP}}
+- **Definition of "helpful":** {{FROM_BOOTSTRAP}}
+- **AI behaviours that annoy them:** {{FROM_BOOTSTRAP}}
 
-{All tools the user has told the agent they use day-to-day — even if not yet connected. Separate list from TOOLS.md, which tracks *granted access*. This is "what exists in their stack."}
+## Life outside work
+
+- **Health/fitness:** {{FROM_BOOTSTRAP}}
+- **Relationships:** {{FROM_BOOTSTRAP}}
+- **Routines:**
+  - **Morning:** {{FROM_BOOTSTRAP}}
+  - **Work:** {{FROM_BOOTSTRAP}}
+  - **Exercise:** {{FROM_BOOTSTRAP}}
+  - **Evening:** {{FROM_BOOTSTRAP}}
+  - **Sleep:** {{FROM_BOOTSTRAP}}
+  - **Weekly anchors:** {{FROM_BOOTSTRAP}}
+- **Good week looks like:** {{FROM_BOOTSTRAP}}
+- **Bad week looks like:** {{FROM_BOOTSTRAP}}
+
+## Tools and systems
+
+- **Daily tools (Basis + anything else):** {{FROM_BOOTSTRAP}}
+- **Organisation system:** {{FROM_BOOTSTRAP}}
+- **Tools they wish they used better:** {{FROM_BOOTSTRAP}}
 
 ---
 
-## Update log
-
-{Dated entries each time this file is materially updated. Short — one line per change.
-
-- 2026-04-22 — Seeded by BOOTSTRAP session.}
+*Last updated: {{TODAY}}*
+*Last validated with {{USER_FIRST_NAME}}: {{TODAY}}*

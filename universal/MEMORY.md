@@ -1,63 +1,45 @@
-# Memory
+# MEMORY — {{AGENT_NAME}}'s Long-Term Memory
 
-Long-term memory for the agent. Structured, append-mostly. Daily activity lives in `memory/YYYY-MM-DD.md`; what gets promoted to this file is what the agent wants to remember across sessions indefinitely.
+*Curated knowledge that persists across sessions. Load in main sessions only — never in shared or group contexts.*
 
----
+*Last maintained: {{TODAY}}*
 
-## User facts
+## People
 
-Things about the user that are stable-ish and the agent uses regularly. Duplicates USER.md for fast access during generation; USER.md stays the source of truth — update both when facts change.
+*Full roster in `USER.md` → Key People. This section is rolling operational context (status updates, recent interactions, things to track per person) — add entries as they accrue.*
 
-- (empty — seeded by BOOTSTRAP)
+## Active projects and Speedblocks
 
-## Commitments (open)
+*[Project or Speedblock — version, status, key decisions, blockers, next steps. Add entries as work starts.]*
 
-Things the user said they'd do, waiting to land. With to-whom, by-when.
+## Decisions log
 
-- (empty)
-
-## Commitments (closed)
-
-Recent closed commitments — kept for ~90 days to help the agent flag patterns.
-
-- (empty)
-
-## Decisions made
-
-Decisions the user made and the agent should remember (so it doesn't re-raise). Include the context briefly.
-
-- (empty)
-
-## User preferences
-
-Settled preferences — things the user has told the agent to always/never do. Cleaner than re-reading every memory log.
-
-- (empty)
+*[YYYY-MM-DD — what was decided, why, outcome if known.]*
 
 ## Patterns observed
 
-Agent-noted patterns worth carrying forward.
+*[Pattern — evidence, frequency, last flagged.]*
 
-- (empty)
+## Preferences learned
+
+*[Preference — context, confidence level, date learned.]*
 
 ## Corrections
 
-Times the user has told the agent "stop doing X" or "don't get this wrong again." Agent reads this before any risky action.
+*[What was wrong — what's actually true — date corrected.]*
 
-- (empty)
+## Lessons learned
 
-## Key events
+*[YYYY-MM-DD — what happened, impact, what changed.]*
 
-Landmark events in the user's work/life the agent should know about (hire dates, major launches, team changes, personal things if shared).
+## Commitments tracker
 
-- (empty)
+*[Commitment — to whom, date committed, status, follow-up date.]*
+
+## Open threads
+
+*[Thread — what's unresolved, when to follow up.]*
 
 ---
 
-## Update rules
-
-- **Append, don't rewrite** — history matters. If a fact changes, mark the old one as superseded, add the new one dated.
-- **Promote from daily logs** — at end of each week, review memory/YYYY-MM-DD.md for anything worth moving here.
-- **Prune expired** — commitments that closed >90 days ago, patterns no longer relevant, preferences the user has since overridden.
-- **Never silently edit** — if the user asks "why did you do X," the agent should be able to point to the memory entry that informed it.
-- **Privacy** — memory is scoped to this user's agent only. Never share memory content across agents.
+*Maintenance schedule: review and distill from daily logs at least weekly. Remove outdated entries. Update existing entries with new context. Flag patterns that have repeated 3+ times.*
