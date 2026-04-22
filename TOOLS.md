@@ -1,13 +1,13 @@
 # TOOLS — {{AGENT_NAME}}'s Tool Configuration
 
-What this OP is connected to. Update as connections are wired.
+What this OpenClaw agent is connected to. Update as connections are wired.
 
 ## Standard tool set (v1.0)
 
 | Tool | Status | Notes |
 |---|---|---|
 | Google Workspace (Calendar / Email / Drive) | ❌ Not connected | |
-| Telegram (OP surface) | ❌ Not connected | Primary surface — wire first. |
+| Telegram (primary surface) | ❌ Not connected | Wire first. |
 | Notion | ❌ Not connected | KRING Ventures workspace. |
 | GitHub | ❌ Not connected | |
 | Web search | ✅ Available | Via OpenClaw harness. |
@@ -21,7 +21,7 @@ Skills are collected from the shared KRING claw repo:
 
   https://github.com/KRING-Ventures/claw-shared
 
-The OP loads skills on demand from this repo. Log non-default scopes here as they're granted.
+The OpenClaw agent loads skills on demand from this repo. Log non-default scopes here as they're granted.
 
 | Skill | Granted | Scope / notes |
 |---|---|---|

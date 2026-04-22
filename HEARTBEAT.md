@@ -42,7 +42,7 @@ Only check tools that are actually connected and configured in `TOOLS.md`. Skip 
 **Flag when:** status change needs attention, someone commented expecting a reply, deadline approaching on an owned task.
 **Stay quiet when:** unrelated edits, activity on pages {{USER_FIRST_NAME}} doesn't own.
 
-### Telegram (primary OP surface)
+### Telegram (primary surface)
 - Messages {{USER_FIRST_NAME}} sent that need a response from {{AGENT_NAME}}.
 - Anything flagged as a reminder or follow-up.
 
