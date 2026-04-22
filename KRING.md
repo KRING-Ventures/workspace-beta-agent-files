@@ -32,24 +32,44 @@ Venture building runs on a **24-week POD sprint**, structured around bi-weekly s
 
 Long-form detail lives in the Hybrid Venture Studio reference.
 
-## Active ventures (2026-04-22 snapshot)
+## Portfolio (2026-04-22 snapshot)
 
-- **Cosmica** — KRING's internal Speedbooting Platform. The canonical home for Speedblocks, Playbooks, Use-cases, and Roadmaps.
-- **Carelog ApS** — AI clinical note-taking for Danish healthcare practitioners (psychologists, physicians, physios, psychiatrists, business psychologists). Record → transcribe → structured clinical note. CVR 45350916, founded 2026-01-20. Pricing: 349 DKK/mo Standard (solo), 299 DKK/mo per user Clinic (5+). D-Mærket certified. 14-day self-serve trial.
-- Earlier POD cohort learnings — **Spectia, Orklys, Sequence, Iris** — inform the current operating model (see Hybrid Studio reference).
+Source: kring.com/portfolio. Refresh from there if the list looks stale.
+
+**Fund III // Speedbooting 22**
+- Carelog
+- Spectia
+- Orklys
+- Ejendom.com
+- Triba
+- Aescolab
+- Sequence
+- Conceivio
+
+**Fund II // Speedbooting 19**
+- Bodil
+- Nuna
+- Welldium
+
+**Fund I // Speedbooting 16**
+- Flextribe
+- Relabee
+- Testaviva
+- Valified
+
+**KRING (original / early)**
+- Enova
+- Bolighed
+- Homebob
+- Human Practice
+- Initto
+- Pree.to
 
 ## How KRING communicates
 
 Language: Danish default, works in English. Tone: direct, specific, no filler. Direct communication is Danish norm, not rudeness.
 
 Decisions are logged as they land, one at a time — never batched. Canonical references are never renamed; scope splits become the next sequential version (v1.0 → v1.1).
-
-## How KRING decides
-
-- The **Speedblock owner** locks Scope and Solution. Owners author the Playbook, Use-cases, and Roadmap. Agents don't draft that content — agents assist, surface tension, log decisions.
-- **Platform architecture** (migrations, infra cutovers, runtime changes) is locked by the platform owner.
-- Decisions are recorded as they land, one at a time. The decision record is the source of truth.
-- **"Locked"** = committed. **"Draft"** = proposal / WIP. Avoid retired framing (e.g. "Wave 1 / Wave 2", "Building Brief").
 
 ## What the agent should never assume about KRING
 
@@ -61,6 +81,6 @@ Decisions are logged as they land, one at a time — never batched. Canonical re
 ## For the agent reading this
 
 - If a user asks a KRING question and the answer isn't in here, say so. Don't extrapolate.
-- This file is **KRING the entity only** — mission, principles, ventures, decision and communication style. Stack, tooling, agent runtime details belong elsewhere (`AGENTS.md`, `TOOLS.md`).
+- This file is **KRING the entity only** — mission, principles, ventures, communication style. Stack, tooling, agent runtime details belong elsewhere (`AGENTS.md`, `TOOLS.md`).
 - Coaching lens lives in `HUMAN_OS.md`.
 - This file is universal and grows. If you learn something stable about KRING, propose an update — don't edit silently.
