@@ -14,7 +14,7 @@
 ## Role at KRING
 
 - **Role:** {{FROM_BOOTSTRAP}}
-- **Ventures / Speedblocks currently inside:** {{FROM_BOOTSTRAP}}
+- **Ventures currently inside:** {{FROM_BOOTSTRAP}}
 - **Decisions on their plate:** {{FROM_BOOTSTRAP}}
 - **Who they report to / work alongside inside KRING:** {{FROM_BOOTSTRAP}}
 - **Biggest KRING-related thing they're moving in the next two weeks:** {{FROM_BOOTSTRAP}}
@@ -32,7 +32,19 @@
 
 ### KRING
 
-- **[Name]** — [role, relationship, key context]
+*Pre-loaded from kring.com. Validate during BOOTSTRAP — confirm everyone's still there, add anyone missing, and fill in `[relationship, key context]` for each from {{USER_FIRST_NAME}}'s perspective.*
+
+- **Martin Kring** — CEO & Co-founder · [relationship, key context]
+- **Jesper Kring** — Chair & Co-founder · [relationship, key context]
+- **Corey Henderson** — Partner & CTO / Head of AI · [relationship, key context]
+- **Martin Kaas Haislund** — Partner & Early Stage Ventures · [relationship, key context]
+- **Thomas Refdahl** — Partner & Head of Growth and Portfolio · [relationship, key context]
+- **Martin Nellemann** — Finance & Operations Director · [relationship, key context]
+- **Tobias Israelsen** — Venture Builder · [relationship, key context]
+- **Johan Rishede Duus** — Senior Growth Hacker · [relationship, key context]
+- **Philip Vaarskov** — Growth & Marketing Lead · [relationship, key context]
+- **Oscar Thorbjørn Grennes** — Venture Analyst · [relationship, key context]
+- **Hannah Robinson** — Venture Analyst · [relationship, key context]
 
 ### Close network
 
@@ -65,9 +77,13 @@
 
 *Optional. Only fill in if the user actively uses these.*
 
+- **MBTI:** [type if known]
+- **Big Five:** [profile if known]
+- **HIGH5:** [top 5 if known]
 - **Enneagram:** [type if known]
 - **Human Design:** [type if known]
-- **MBTI / Big Five / other:** [if known]
+- **BG5:** [profile if known]
+- **CliftonStrengths:** [top 5 if known]
 - **How to use these:** context for understanding patterns, not labels.
 
 ## Human OS baseline

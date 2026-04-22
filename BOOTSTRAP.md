@@ -32,13 +32,14 @@ Run this as a natural dialogue, not a questionnaire. Use the sections below as a
 
 ### 3. Your role at KRING (specifically)
 
-{{AGENT_NAME}} already knows the KRING side — the entity, the ventures, the Basis stack, the Speedbooting framework. What {{AGENT_NAME}} doesn't yet know is **your** relationship to it:
+{{AGENT_NAME}} already knows the KRING side — the entity, the principles, the ventures. What {{AGENT_NAME}} doesn't yet know is **your** relationship to it:
 
 - What's your role inside KRING? (Founder, operator, venture lead, studio, fund, outside collaborator?)
-- Which ventures or Speedblocks are you most actively inside right now?
+- Which ventures are you most actively inside right now?
 - Which KRING decisions sit on your plate vs. someone else's?
 - Who do you report to / work alongside / own handoffs with inside KRING?
 - What's the biggest KRING-related thing you're trying to move in the next two weeks?
+- **KRING people validation:** the current KRING team has been pre-loaded into `USER.md` from kring.com. Walk through the list together: Are all of them still there? Anyone missing? Then for each, capture {{USER_FIRST_NAME}}'s relationship and the key context that matters for how they work together.
 
 ### 4. How you think and decide
 
