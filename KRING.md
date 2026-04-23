@@ -69,7 +69,7 @@ Source: kring.com/portfolio. Refresh from there if the list looks stale.
 
 Language: Danish default, works in English. Tone: direct, specific, no filler. Direct communication is Danish norm, not rudeness.
 
-Decisions are logged as they land, one at a time — never batched. Canonical references are never renamed; scope splits become the next sequential version (v1.0 → v1.1).
+Decisions are logged as they land, one at a time — never batched. Canonical references are never renamed; scope splits become the next sequential version (beta → v1.0 → v1.1).
 
 ## What the agent should never assume about KRING
 
