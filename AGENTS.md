@@ -6,16 +6,33 @@ This is the operational manual. Follow it every session, no exceptions.
 
 Every session, before doing anything else:
 
-1. Read `IDENTITY.md` — who you are.
-2. Read `SOUL.md` — how you behave.
-3. Read `USER.md` — who you're helping.
-4. Read `KRING.md` — org context.
-5. Read `TOOLS.md` — what's actually wired up.
-6. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
-7. If this is a **main session** (direct conversation with {{USER_FIRST_NAME}}): also read `MEMORY.md`.
-8. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
+1. **Pull latest from GitHub** — both the shared framework repo (`workspace-1-0-agent-files`) and your own per-pilot repo (`op-<pilot>`). GitHub is the source of truth; the local workspace is a working mirror. See **GitHub: the single source of truth** below.
+2. Read `IDENTITY.md` — who you are.
+3. Read `SOUL.md` — how you behave.
+4. Read `USER.md` — who you're helping.
+5. Read `KRING.md` — org context.
+6. Read `TOOLS.md` — what's actually wired up.
+7. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
+8. If this is a **main session** (direct conversation with {{USER_FIRST_NAME}}): also read `MEMORY.md`.
+9. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
 
 Don't ask permission. Don't announce it. Just do it.
+
+## GitHub: the single source of truth
+
+All agent files live in GitHub. The local workspace is a working mirror, not the canonical store.
+
+- **Shared framework** (this file set): `KRING-Ventures/workspace-1-0-agent-files`.
+- **Your personal layer**: `KRING-Ventures/op-<pilot>` (private, one per pilot).
+
+### Rules
+
+- **Pull before work.** At session boot, fetch the latest from both repos so you're running against the current framework and your latest personal state.
+- **Push as you go.** Every meaningful change to your own files — daily memory logs, `MEMORY.md` updates, `USER.md` revisions, new automations, `TOOLS.md` edits — is committed and pushed immediately. Never leave uncommitted work sitting in the local workspace.
+- **Never work in uncommitted files.** If you edit a tracked file, commit and push it same-session. Uncommitted local state is not a valid save.
+- **Cross-session continuity depends on this.** If it's not in GitHub, the next session (yours or any other agent's) doesn't see it.
+- **GitHub is also your backup.** The repos are durable; local filesystem state is not.
+- **Commit messages are for humans.** Keep them short, present-tense, and specific about what changed and why.
 
 ## Session types
 

@@ -56,6 +56,16 @@ These repos are private by design. Personal context never sits alongside shared 
 
 Not in this repo. Skills live in the shared KRING claw repo at https://github.com/KRING-Ventures/claw-shared (private). Each agent loads skills on demand; non-default scopes are recorded in that pilot's private `TOOLS.md`.
 
+## GitHub is the source of truth
+
+Both layers — shared framework and each pilot's personal repo — live in GitHub. Local filesystem state is a working mirror, not canonical.
+
+- Agents **pull at session start** so they're running against the latest framework and latest personal state.
+- Agents **push after every meaningful change** — memory logs, `MEMORY.md`, `USER.md`, `TOOLS.md`, automations. Never leave uncommitted work.
+- GitHub is also each agent's **backup and cross-session access** mechanism. If it isn't pushed, it doesn't persist.
+
+See `AGENTS.md` for the operational rules.
+
 ## Instantiation flow (per agent)
 
 At OpenClaw runtime, both layers are assembled:
