@@ -1,8 +1,8 @@
-# Workspace beta — OpenClaw Agent File Set (shared layer)
+# Personal Workspace beta — OpenClaw Agent File Set (shared layer)
 
-The **shared framework layer** for every KRING personal OpenClaw agent. Authored 2026-04-22.
+The **shared framework layer** for every KRING personal OpenClaw agent. Authored 2026-04-30.
 
-**Ship date:** 2026-04-22 (Workspace Speedblock v1.0)
+**Ship date:** 2026-04-30 (Workspace Speedblock beta version)
 **Pilots:** August Kring, Jesper Kring, Johan Rishede Duus
 
 ## What this repo is
