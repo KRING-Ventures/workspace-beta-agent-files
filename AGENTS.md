@@ -6,23 +6,58 @@ This is the operational manual. Follow it every session, no exceptions.
 
 Every session, before doing anything else:
 
-1. **Pull latest from GitHub** — both the shared framework repo (`workspace-1-0-agent-files`) and your own per-pilot repo (`op-<pilot>`). GitHub is the source of truth; the local workspace is a working mirror. See **GitHub: the single source of truth** below.
-2. Read `IDENTITY.md` — who you are.
-3. Read `SOUL.md` — how you behave.
-4. Read `USER.md` — who you're helping.
-5. Read `KRING.md` — org context.
-6. Read `TOOLS.md` — what's actually wired up.
-7. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
-8. If this is a **main session** (direct conversation with {{USER_FIRST_NAME}}): also read `MEMORY.md`.
-9. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
+1. **Pull latest from GitHub** — both the shared framework repo (`workspace-beta-agent-files`) and your own per-pilot repo (`op-<pilot>`). GitHub is the source of truth; the local workspace is a working mirror. See **GitHub: the single source of truth** below.
+2. **Run onboarding catch-up.** If the framework or any subscribed Speedblock has shipped a new version since you last synced, bring yourself up to current. See **Onboarding: how you catch up to current state** below.
+3. Read `IDENTITY.md` — who you are.
+4. Read `SOUL.md` — how you behave.
+5. Read `USER.md` — who you're helping.
+6. Read `KRING.md` — org context.
+7. Read `TOOLS.md` — what's actually wired up.
+8. Read `memory/YYYY-MM-DD.md` for today and yesterday — recent context.
+9. If this is a **main session** (direct conversation with {{USER_FIRST_NAME}}): also read `MEMORY.md`.
+10. If this is a **heartbeat poll**: read `HEARTBEAT.md` and act accordingly.
 
 Don't ask permission. Don't announce it. Just do it.
+
+## Onboarding: how you catch up to current state
+
+The framework and any Speedblocks you're subscribed to may have shipped changes since your last session. Each ships its own onboarding entries; you process the deltas at boot, no human needed.
+
+### Where onboarding lives
+
+- **Framework:** `onboarding/CHANGELOG.md` + `onboarding/STATE_VERSION` + `onboarding/MIGRATIONS/` in the `workspace-beta-agent-files` repo. Plus `onboarding/BOOTSTRAP.md` for first-session use.
+- **Speedblocks:** the same shape — `onboarding/CHANGELOG.md` / `STATE_VERSION` / `MIGRATIONS/` — inside each Speedblock's repo.
+- **Your version cursors:**
+  - `STATE_VERSION` at the root of your OP repo — the framework version you last synced with.
+  - `SPEEDBLOCKS.md` at the root of your OP repo — one row per subscribed Speedblock, each with a `Last synced` value.
+
+### The catch-up loop
+
+After pulling latest:
+
+1. **Framework check.** Read framework `onboarding/STATE_VERSION`. If it's ahead of your own `STATE_VERSION`:
+   - Read `onboarding/CHANGELOG.md` entries from your version onwards.
+   - Run any `onboarding/MIGRATIONS/*.md` files for those versions, in order. Each migration file contains explicit instructions — apply them to your per-pilot files.
+   - Update your own `STATE_VERSION` to the framework's current value.
+   - Commit + push.
+2. **Speedblock check.** For each row in your `SPEEDBLOCKS.md`:
+   - Pull that Speedblock's repo.
+   - Read its `onboarding/STATE_VERSION`. If ahead of your `Last synced` value: read its CHANGELOG entries since, run any MIGRATIONS in order, update your `Last synced`, commit + push.
+3. **Log it.** In today's daily memory log, note which versions you onboarded to and what changed.
+
+### First-session BOOTSTRAP
+
+If you have no `STATE_VERSION` at all (this is your very first session), run `onboarding/BOOTSTRAP.md` from the framework first — it's the zeroth migration. It fills your placeholders and seeds your initial state. After BOOTSTRAP completes, set your `STATE_VERSION` to the framework's current value and proceed.
+
+### Why this exists
+
+Frameworks evolve. Per-pilot state can drift behind. This loop guarantees an OP catches up cleanly to current state regardless of how long it's been dormant — without anyone manually patching files. Skipping it leaves you operating against a stale framework.
 
 ## GitHub: the single source of truth
 
 All agent files live in GitHub. The local workspace is a working mirror, not the canonical store.
 
-- **Shared framework** (this file set): `KRING-Ventures/workspace-1-0-agent-files`.
+- **Shared framework** (this file set): `KRING-Ventures/workspace-beta-agent-files`.
 - **Your personal layer**: `KRING-Ventures/op-<pilot>` (private, one per pilot).
 
 ### Rules

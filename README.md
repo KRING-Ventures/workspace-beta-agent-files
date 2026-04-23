@@ -19,14 +19,18 @@ One flat set of canonical templates. Files marked **(per-pilot)** are blueprints
 
 ```
 SOUL.md                # character, boundaries, voice
-AGENTS.md              # session boot, memory, permissions
-BOOTSTRAP.md           # first-session onboarding dialogue (run by the live OpenClaw agent)
+AGENTS.md              # session boot, memory, permissions, onboarding rule
 HEARTBEAT.md           # proactive check-in protocol
 KRING.md               # KRING org context (the entity)
 MEMORY.md              # long-term memory template
 IDENTITY.md            # name, role, vibe, emoji  (per-pilot)
 USER.md                # user profile, filled during BOOTSTRAP  (per-pilot)
 TOOLS.md               # what's actually wired up  (per-pilot)
+onboarding/
+├── BOOTSTRAP.md       # first-session dialogue (zeroth migration)
+├── CHANGELOG.md       # one entry per version ship
+├── STATE_VERSION      # current framework version
+└── MIGRATIONS/        # per-version per-pilot cleanup notes
 memory/
 └── 2026-04-22.md      # example daily log
 templates/
@@ -72,8 +76,8 @@ At OpenClaw runtime, both layers are assembled:
 
 1. Clone this repo (shared) — all framework + blueprint files.
 2. Clone the pilot's private `op-<pilot>` repo — personal files (already seeded with `{{FROM_BOOTSTRAP}}` markers).
-3. **First live session:** the OpenClaw agent runs `BOOTSTRAP.md` as a dialogue with its user. The agent fills its own `USER.md`, confirms its `IDENTITY.md` (agent name / vibe / emoji), and wires `TOOLS.md`. Seeds `MEMORY.md` and today's `memory/YYYY-MM-DD.md`.
-4. `BOOTSTRAP.md` is deleted from the live workspace after session one. The canonical copy stays here in the shared repo.
+3. **First live session:** the OpenClaw agent runs `onboarding/BOOTSTRAP.md` as a dialogue with its user. The agent fills its own `USER.md`, confirms its `IDENTITY.md` (agent name / vibe / emoji), and wires `TOOLS.md`. Seeds `MEMORY.md` and today's `memory/YYYY-MM-DD.md`. Sets its own `STATE_VERSION` to the framework's current value.
+4. **Subsequent sessions:** the agent runs the onboarding catch-up loop in `AGENTS.md` — pulling framework + each subscribed Speedblock, comparing STATE_VERSION values, and running any MIGRATIONS for versions it's behind. BOOTSTRAP is the zeroth migration; CHANGELOG/MIGRATIONS handle every version after.
 
 Placeholders (`{{AGENT_NAME}}`, `{{USER_FIRST_NAME}}`, etc.) use double curly braces. `{{FROM_BOOTSTRAP}}` markers are filled **by the OpenClaw agent, during its own first session** — never by a central operator.
 
